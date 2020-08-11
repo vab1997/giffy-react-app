@@ -1,29 +1,30 @@
 .Gif {
-    border: 1px solid #eee;
-    border-radius: 6px;
-    color: #eee;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    margin: 16px;
-    padding: 32px;
-    width: 100%;
-}
-
-.Gif h4 {
-    margin: 0;
-}
-
-.Gif img {
-    width: 100%;
-    object-fit: contain;
-    vertical-align: top;
-}
-
-.Gif-link {
+    margin-bottom: .5em;
+  }
+  
+  .Gif-link {
     color: #000;
     display: block;
     text-decoration: none;
     position: relative;
     width: 100%;
-}
+  }
+  
+  .Gif h4 {
+    background: rgba(0, 0, 0, .3);
+    bottom: 0;
+    font-size: 12px;
+    color: #fff;
+    margin: 0;
+    position: absolute;
+  }
+  
+  .Gif img {
+    width: 100%;
+    object-fit: contain;
+    vertical-align: top;
+  }
+  
+  i {
+    font-size: 80px;
+  }

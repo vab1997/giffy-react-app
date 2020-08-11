@@ -4,10 +4,13 @@ import useGlobalGifs from "hooks/useGlobalGifs"
 
 export default function Detail({ params }) {
   const gifs = useGlobalGifs()
-
+  console.log(gifs)
   const gif = gifs.find((singleGif) => singleGif.id === params.id)
-  const { id, title, url } = gif
-  console.log(gif)
 
-  return <Gif id={id} title={title} url={url} />
+  return (
+    <>
+      <h3 className="App-title">{gif.title}</h3>
+      <Gif {...gif} />
+    </>
+  )
 }

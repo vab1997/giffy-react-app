@@ -2,10 +2,8 @@ import React, { useState, useContext } from "react"
 import { Link, useLocation } from "wouter"
 import { useGifs } from "hooks/useGifs"
 import ListOfGifs from "components/ListOfGifs"
-import StaticContext from "context/StaticContext"
 import GifsContext from "context/GifsContext"
-
-const POPULARES_GIFS = ["messi", "cristiano", "neymar"]
+import TrendingSearches from "components/TrendingSearches"
 
 export default function Home() {
   const [keyword, setKeyword] = useState("")
@@ -13,7 +11,6 @@ export default function Home() {
   const { loading, gifs } = useGifs()
 
   const context = useContext(GifsContext)
-  console.log(context.gifs)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -28,6 +25,7 @@ export default function Home() {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        <button>Search</button>
         <input
           type="text"
           value={keyword}
@@ -35,16 +33,15 @@ export default function Home() {
           placeholder="Search a gif here..."
         />
       </form>
-      <h3 className="App-title">Ultima busqueda</h3>
-      <ListOfGifs gifs={gifs} />
-      <h3 className="App-title">Los gifs mas populares</h3>
-      <ul>
-        {POPULARES_GIFS.map((popularGif) => (
-          <li key={popularGif}>
-            <Link to={`/search/${popularGif}`}>gifs de {popularGif}</Link>
-          </li>
-        ))}
-      </ul>
+      <div className="App-main">
+        <div className="App-results">
+          <h3 className="App-title">Ultima busqueda</h3>
+          <ListOfGifs gifs={gifs} />
+        </div>
+        <div className="App-category">
+          <TrendingSearches />
+        </div>
+      </div>
     </>
   )
 }
