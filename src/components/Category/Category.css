@@ -25,7 +25,7 @@
         display: list-item;
     }
 
-    .Category-list {
+    .Category-list li::before {
         color: #8c55a2;
         margin-right: 0.5em;
         font-size: 1em;

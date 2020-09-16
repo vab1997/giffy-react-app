@@ -9,6 +9,7 @@
     "just-debounce-it": "^1.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-scripts": "3.4.1",
     "wouter": "^2.5.1"
   },
@@ -32,5 +33,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^3.4.1",
+    "react-test-renderer": "^16.13.1"
   }
 }

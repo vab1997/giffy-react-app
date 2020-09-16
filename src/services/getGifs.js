@@ -16,11 +16,12 @@ const fromApiResponseToGifs = (apiResponse) => {
 export default function getGifs({
   limit = 10,
   keyword = "boca juniors",
+  rating = "g",
   page = 0,
 } = {}) {
   const api_url = `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=${limit}&offset=${
     limit * page
-  }&rating=g&lang=en`
+  }&rating=${rating}g&lang=en`
 
   return fetch(api_url)
     .then((res) => res.json())

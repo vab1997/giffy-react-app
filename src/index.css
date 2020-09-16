@@ -26,7 +26,18 @@ button {
   color: #fff;
   padding: 8px 16px;
   font-size: 16px;
-  border-radius: 10px 0 0 10px;
+  border-radius: 50px 0 0 50px;
+}
+input[type=text] {
+  border-radius: 0;
+  font-size: 16px;
+  border: none;
+  padding: 4px 16px;
+}
+select {
+  border-radius: 0 50px 50px 0;
+  border: 0;
+  background: #c2cfd6;
 }
 
 a {
@@ -47,9 +58,3 @@ form {
   justify-content: center;
 }
 
-input[type=text] {
-  border-radius: 0 10px 10px 0;
-  font-size: 16px;
-  border: none;
-  padding: 4px 16px;
-}
